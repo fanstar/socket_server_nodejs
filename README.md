@@ -71,3 +71,28 @@ server.listen(9999, function () {
 });
 
 ```
+
+## Client Socket - Node Js [Test]
+```Node JS
+var net = require('net');
+var client = new net.Socket();
+client.connect(5000, '192.168.22.1', function() {
+        console.log('Connected');
+        client.write('Hello, server! Love, Client.');
+});
+var i = 0;
+client.on('data', function(data) {
+        console.log('Received: ' + data);
+        i++;
+        if(i==2)
+                client.destroy(); 
+});
+client.on('close', function() {
+        console.log('Connection closed');
+});
+
+client.on('error', function(error){
+        console.log('error: ' + error);
+});
+```
+
