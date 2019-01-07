@@ -1,6 +1,6 @@
 ## Socket Server Node JS
 
-
+```Node JS
 // Import net module.
 var net = require('net');
 
@@ -69,3 +69,5 @@ server.listen(9999, function () {
     });
 
 });
+
+```
