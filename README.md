@@ -83,9 +83,9 @@ client.connect(5000, '192.168.22.1', function() {
 var i = 0;
 client.on('data', function(data) {
         console.log('Received: ' + data);
-        i++;
-        if(i==2)
-                client.destroy(); 
+//        i++;
+//        if(i==2)
+//                client.destroy(); 
 });
 client.on('close', function() {
         console.log('Connection closed');
